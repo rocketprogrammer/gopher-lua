@@ -28,7 +28,7 @@ func (tb *LTable) rawSetStringUnsafe(key string) *LValue {
 	return tb.tab.setStr(key)
 }
 
-// Len returns length of this LTable.
+// Len returns length of this LTable without using __len.
 func (tb *LTable) Len() int {
 	return int(tb.tab.GetN())
 }
