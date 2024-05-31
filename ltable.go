@@ -276,8 +276,8 @@ func keyRawEquals(lhs, rhs LValue) bool {
 	case LTNil:
 		ret = true
 	case LTNumber:
-		v1, _ := lhs.assertFloat64()
-		v2, _ := rhs.assertFloat64()
+		v1, _ := lhs.(LNumber)
+		v2, _ := rhs.(LNumber)
 		ret = v1 == v2
 	case LTBool:
 		ret = bool(lhs.(LBool)) == bool(rhs.(LBool))
